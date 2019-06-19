@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Resultado</title>
+
+	<style type="text/css">
+		body {
+			font-size: 12pt;
+			font-family: Verdana,sans-serif;
+		}
+
+		h1 {
+			margin: 20px;
+			font-size: 12pt;
+			font-weight: bolder;
+		}
+
+		.container1 {
+		    display: table;
+		    clear: both;
+		    margin: 0 auto;
+		    width: calc(100% - 50px); 
+		    transition: 0.2s;
+		    border: 1px solid grey;
+		}
+
+		.content4 {
+		  float: left;
+		  width: 20%;
+		}
+
+		.justify {
+			text-align: justify;
+		}
+
+		.bolder {
+			font-weight: bolder;
+		}
+
+		p {
+			margin: 20px;
+			line-height: 30px;
+		}
+					
+	</style>
+</head>
+<body>
+
+	<h1>Texto inserido</h1>
+	<p class="justify">{{texto}}</p>
+
+	<br>
+
+	<p><span class="bolder">Quantidade de palavra:</span> {{quantPalavras}}</p>
+
+	<br>
+
+	<p class="bolder">Lista de palavras únicas ordenadas pela quantidade</p>
+	<div class="container1">
+		{% for ordem in ordenar %}
+			<div class="content4">
+				<p><span class="bolder">{{ordem.1}}</span> = {{ordem.0}}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+</body>
+</html>
