@@ -1,0 +1,37 @@
+body {
+    font-size: 12pt;
+    font-family: Verdana,sans-serif;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 12pt;
+    font-weight: bolder;
+}
+
+.container1 {
+    display: table;
+    clear: both;
+    margin: 0 auto;
+    width: calc(100% - 50px); 
+    transition: 0.2s;
+    border: 1px solid grey;
+}
+
+.content4 {
+  float: left;
+  width: 20%;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+p {
+    margin: 20px;
+    line-height: 30px;
+}
