@@ -1,8 +1,8 @@
+from django.views.generic import TemplateView
+
 from django.shortcuts import render
 
 from collections import Counter
-
-import re
 
 def home(request):
     return render(request, 'index.html')
@@ -16,7 +16,8 @@ def removerSimbolos(texto, cRemover):
 	return texto
 
 def resultado(request):
-	texto = request.GET['texto']
+	#texto = request.GET['texto']
+	texto = request.POST['texto']
 
 	textoSP = removerSimbolos(texto, ',.;:\'\"*-+_<>/?!@#$%&*=()\{\}[]')
 
